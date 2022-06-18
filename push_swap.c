@@ -6,7 +6,7 @@
 /*   By: mbouhaba <mbouhaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 16:05:17 by mbouhaba          #+#    #+#             */
-/*   Updated: 2022/06/18 20:21:03 by mbouhaba         ###   ########.fr       */
+/*   Updated: 2022/06/18 22:10:39 by mbouhaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ int	main(int ac, char **av)
 
 	a = NULL;
 	b = NULL;
-	if (ac == 2 || check_empty(av))
-		ft_error();
 	check(av);
 	i = 0;
 	while (av[++i])

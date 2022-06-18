@@ -6,7 +6,7 @@
 /*   By: mbouhaba <mbouhaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 22:01:24 by mbouhaba          #+#    #+#             */
-/*   Updated: 2022/06/18 17:04:07 by mbouhaba         ###   ########.fr       */
+/*   Updated: 2022/06/18 22:09:38 by mbouhaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,10 @@ void	check_char(char **str)
 	while (str[i])
 	{
 		j = 0;
+		if (str[i][j] == '-' || str[i][j] == '+')
+			j++;
 		while (str[i][j])
 		{
-			if ((str[i][0] == '-' && (str[i][j + 1] >= '0' \
-			&& str[i][j + 1] <= '9')) \
-			|| (str[i][0] == '+' && (str[i][j + 1] >= '0' \
-			&& str[i][j + 1] <= '9')))
-				j++;
 			if (!ft_isdigit(str[i][j]))
 			{
 				write(2, "Error\n", 6);

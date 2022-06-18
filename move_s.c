@@ -6,7 +6,7 @@
 /*   By: mbouhaba <mbouhaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 19:50:03 by mbouhaba          #+#    #+#             */
-/*   Updated: 2022/06/17 23:05:29 by mbouhaba         ###   ########.fr       */
+/*   Updated: 2022/06/18 22:16:51 by mbouhaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_swap(t_node **a, char c, int i)
 {
 	t_node	*temp;
 
-	if ((*a) == NULL)
+	if ((*a) == NULL || stack_size(a) == 1)
 		return ;
 	temp = (*a)->next;
 	(*a)->next = temp->next;
